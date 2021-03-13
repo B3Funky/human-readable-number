@@ -28,8 +28,7 @@ module.exports = function toReadable(number) {
         60: 'sixty',
         70: 'seventy',
         80: 'eighty',
-        90: 'ninety',
-        'hundred': 'hundred'
+        90: 'ninety'
     };
 
     if (names[number]) {
@@ -41,7 +40,7 @@ module.exports = function toReadable(number) {
     }
 
     if (number >= 100 && number < 1000) {
-        let hundred = names[+number.toString()[0]] + ' ' + names['hundred'];
+        let hundred = names[+number.toString()[0]] + ' hundred';
         if (!(number % 100)) {
             return hundred
         } else {
